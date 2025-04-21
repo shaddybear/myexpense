@@ -25,12 +25,19 @@ export const colors = {
 };
 
 export const spacingX = {
-  _3: scale(3),
-  _5: scale(5),
-  _7: scale(7),
-  _10: scale(10),
-  12: scale(12),
-};
+    _3: scale(3),
+    _5: scale(5),
+    _7: scale(7),
+    _10: scale(10),
+    _12: scale(12),
+    _15: scale(15),
+    _20: scale(20),
+    _25: scale(25),
+    _30: scale(30),
+    _35: scale(35),
+    _40: scale(40),
+  };
+  
 export const spacingY = {
     _5: verticalScale(5),
     _7: verticalScale(7),
