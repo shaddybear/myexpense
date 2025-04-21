@@ -1,6 +1,8 @@
 import { Href } from "expo-router";
 import { Firestore, Timestamp } from "firebase/firestore"; 
 import { Icon } from "phosphor-react-native";
+//hit in terminal npm i firbase
+//firebase auth and phosphor-react-native download that all error gone
 import React, { ReactNode } from "react";
 import {
   ActivityIndicator,
