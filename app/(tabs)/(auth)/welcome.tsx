@@ -1,19 +1,34 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import ScreenWrapper from '@/components/ScreenWrapper'
-import Typo from '@/constants/Typo'
-import { colors, spacingX, spacingY } from '@/constants/theme'
-import { verticalScale } from '@/utils/styling'
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import React from "react";
+import ScreenWrapper from "@/components/ScreenWrapper";
+import Typo from "@/components/Typo";
+import { colors, spacingX, spacingY } from "@/constants/theme";
+import { verticalScale } from "@/utils/styling";
 
-const index = () => {
+const Welcome = () => {
   return (
     <ScreenWrapper>
-     <Typo size={40} fontWeight={700} color='green'> welcome page </Typo>
-    </ScreenWrapper>
-  )
-}
+      <View style={styles.container}>
+        {/* login button & image */}
+        <View>
+          <TouchableOpacity style={styles.loginButton}>
+            <Typo fontWeight="500">Sign in</Typo>
+          </TouchableOpacity>
 
-export default index
+          <Image
+            source={require("../../../assets/images/exp.png")} 
+            // Adjust path if needed (e.g., "../../assets/images/welcome.png")
+            style={styles.welcomeImage}
+            resizeMode="contain"
+          />
+        </View>
+      </View>
+    </ScreenWrapper>
+  );
+};
+
+export default Welcome;
+
 
 const styles = StyleSheet.create({
   container: {
