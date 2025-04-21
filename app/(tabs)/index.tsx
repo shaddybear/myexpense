@@ -1,16 +1,21 @@
 import { Image, StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 import { colors } from "@/constants/theme";
+import { useRouter } from "expo-router";
 
 const index = () => {
+    const router = useRouter();
+    useEffect(()=>{
+      setTimeout(() => {
+           router.push('/(tabs)/(auth)/welcome')
+      }, 2000);
+    }, [])
   return (
     <View style={styles.container}>
       <Image
         style={styles.logo}
         resizeMode="contain"
-        // source={require('../assets/images/welcome1.jpg')}
-        // source={require('../../../../assets/images/welcome1.jpg')}
-        source={require('../../assets/images/welcome2.jpg')}
+        source={require('../../assets/images/welcome.png')}
       />
     </View>
   );
@@ -26,7 +31,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.neutral900,
   },
  logo: {
-    height: "20%",
+    height: "40%",
     aspectRatio: 1,
  }
 });
