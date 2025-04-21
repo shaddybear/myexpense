@@ -83,6 +83,8 @@ export type TypoProps = {
     uid?: string;
     walletId: string;
   };
+
+  
   
   export type CategoryType = {
     label: string;
